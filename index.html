@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f2">
+    <meta name="description" content="A smarter view of your money. Meet AI Money, your personal economic intelligence dashboard.">
+    <title>AI Money — See money differently</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="AI Money home">
+          <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 22.8 15.9 5l9.1 17.8M10.1 16.7h11.8M6.6 25.7h18.8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span>ai money<span class="brand-period">.</span></span>
+        </a>
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="side-nav" aria-label="Main navigation">
+          <button class="nav-link active" data-view="overview"><span class="nav-icon">◫</span>Overview</button>
+          <button class="nav-link" data-view="activity"><span class="nav-icon">↗</span>Activity</button>
+          <button class="nav-link" data-view="intelligence"><span class="nav-icon">✳</span>Intelligence<span class="nav-new">NEW</span></button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="insight-mini">
+            <div class="mini-icon">✳</div>
+            <div><strong>A clearer picture</strong><p>Your money, with context.</p></div>
+            <span class="mini-arrow">↗</span>
+          </div>
+          <button class="profile-button" id="profile-button">
+            <span class="avatar" id="sidebar-avatar">A</span>
+            <span class="profile-copy"><strong id="sidebar-name">Alex Morgan</strong><small>Personal space</small></span>
+            <span class="profile-dots">···</span>
+          </button>
+          <p class="prototype-note"><span class="status-dot"></span>Prototype · demo data</p>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-sep">/</span><strong id="page-title">Overview</strong></div>
+          <div class="topbar-actions">
+            <span class="demo-pill"><span class="status-dot"></span>DEMO MODE</span>
+            <button class="icon-button notification-button" aria-label="Notifications">♧<span class="notification-dot"></span></button>
+            <button class="top-avatar" id="top-avatar" aria-label="Open profile">A</button>
+          </div>
+        </header>
+
+        <div class="page-wrap">
+          <section class="welcome-row">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-spark">✳</span> <span id="today-label"></span></p>
+              <h1 id="greeting">Money, in a new light.</h1>
+              <p class="subheading">A little more clarity for everything you’re building.</p>
+            </div>
+            <button class="button button-dark" id="add-money"><span>＋</span> Get started</button>
+          </section>
+
+          <section class="hero-grid">
+            <article class="balance-card">
+              <div class="balance-top">
+                <div><span class="card-overline">YOUR SNAPSHOT <span class="info-dot" title="Sample balance for preview only">i</span></span>
+                  <h2>Money in view</h2></div>
+                <button class="card-menu" aria-label="More balance options">···</button>
+              </div>
+              <div class="balance-number"><span class="currency-symbol">$</span><span id="balance-value">12,840</span><span class="cents">.50</span><button class="eye-button" id="toggle-balance" aria-label="Hide balance">◉</button></div>
+              <div class="balance-foot"><span class="balance-change"><span>↗</span> 4.8%</span><span>vs. last month</span><span class="foot-divider"></span><span>Updated just now</span></div>
+              <div class="balance-chart" aria-label="Balance history illustration">
+                <div class="chart-lines"><span></span><span></span><span></span></div>
+                <svg viewBox="0 0 680 100" preserveAspectRatio="none" role="img" aria-label="Upward trend"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#b9f45d" stop-opacity=".2"/><stop offset="1" stop-color="#b9f45d" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M0 74 C32 74 34 52 67 58 S108 80 136 62 S176 52 205 60 S245 40 270 49 S312 62 337 44 S373 58 399 40 S434 39 460 47 S495 29 520 34 S561 47 584 24 S624 30 646 14 S670 20 680 4 V100 H0Z"/><path class="chart-line" d="M0 74 C32 74 34 52 67 58 S108 80 136 62 S176 52 205 60 S245 40 270 49 S312 62 337 44 S373 58 399 40 S434 39 460 47 S495 29 520 34 S561 47 584 24 S624 30 646 14 S670 20 680 4"/></svg>
+                <div class="chart-labels"><span>JUN 01</span><span>JUN 15</span><span>JUN 30</span><span>JUL 15</span><span>JUL 30</span></div>
+              </div>
+            </article>
+            <article class="clarity-card">
+              <div class="clarity-top"><span class="clarity-icon">✳</span><span class="live-chip"><span class="status-dot"></span> YOUR AI BRIEF</span></div>
+              <div class="clarity-copy">
+                <p class="card-overline">A LITTLE MORE CLARITY</p>
+                <h2 id="insight-title">You’re building a nice rhythm.</h2>
+                <p id="insight-copy">Your demo spending is trending 8% lower this month. That’s room to make your next move with intention.</p>
+              </div>
+              <button class="text-button" data-view="intelligence">Explore your intelligence <span>↗</span></button>
+              <div class="clarity-decoration"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </article>
+          </section>
+
+          <section class="section-heading">
+            <div><p class="eyebrow">THE BIG PICTURE</p><h2>Your money, in motion</h2></div>
+            <button class="period-button">This month <span>⌄</span></button>
+          </section>
+
+          <section class="stats-grid">
+            <article class="stat-card"><div class="stat-head"><span>In</span><span class="stat-indicator green">↗</span></div><strong id="income-value">$4,250</strong><div class="stat-foot"><span>Income</span><span class="muted-change">+12.4% <span>vs last month</span></span></div></article>
+            <article class="stat-card"><div class="stat-head"><span>Out</span><span class="stat-indicator coral">↘</span></div><strong id="spending-value">$1,890</strong><div class="stat-foot"><span>Spending</span><span class="muted-change">−8.2% <span>vs last month</span></span></div></article>
+            <article class="stat-card stat-card-savings"><div class="stat-head"><span>Kept</span><span class="stat-indicator purple">✳</span></div><strong id="savings-value">$2,360</strong><div class="stat-foot"><span>Net this month</span><span class="muted-change">55.5% <span>of income</span></span></div></article>
+            <article class="stat-card stat-card-goal"><div class="goal-top"><span class="goal-icon">⌂</span><span class="goal-more">···</span></div><span class="goal-label">YOUR NEXT CHAPTER</span><strong>Build your cushion</strong><div class="goal-progress"><span></span></div><div class="goal-foot"><span>$3,200 saved</span><span>$5,000</span></div></article>
+          </section>
+
+          <section class="lower-grid">
+            <article class="activity-card">
+              <div class="section-heading compact"><div><p class="eyebrow">THE LITTLE THINGS ADD UP</p><h2>Recent activity</h2></div><button class="link-button" data-view="activity">See all <span>↗</span></button></div>
+              <div class="transaction-list" id="transaction-list"></div>
+            </article>
+            <article class="economic-card">
+              <div class="economic-top"><span class="economic-symbol">◎</span><span class="live-chip soft-chip"><span class="status-dot"></span> ECONOMIC PULSE</span><button class="card-menu" aria-label="More insight options">···</button></div>
+              <div class="economic-content"><p class="card-overline">THE WORLD AROUND YOUR WALLET</p><h2>Big picture.<br><em>Personal meaning.</em></h2><p id="model-copy">A simple way to understand the forces shaping everyday money.</p><div class="economy-data" id="economy-data"><div><strong>2.9%</strong><span>US inflation*</span></div><div><strong>3.1%</strong><span>GDP growth*</span></div></div></div>
+              <button class="text-button dark-text-button" data-view="intelligence">See the bigger picture <span>↗</span></button>
+              <small class="data-source" id="model-status">*Illustrative example. No live data or model forecast.</small>
+            </article>
+          </section>
+          <footer class="footer-note">AI Money is an informational prototype, not a bank or a financial adviser. <a href="/README.md">Learn more</a></footer>
+        </div>
+      </main>
+    </div>
+
+    <dialog class="modal" id="signup-modal" aria-labelledby="modal-title">
+      <form class="signup-form" id="signup-form">
+        <button type="button" class="modal-close" id="close-modal" aria-label="Close dialog">×</button>
+        <div class="modal-brand"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 22.8 15.9 5l9.1 17.8M10.1 16.7h11.8M6.6 25.7h18.8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>ai money<span class="brand-period">.</span></div>
+        <p class="eyebrow">A FRESH PERSPECTIVE</p>
+        <h2 id="modal-title">Let’s make money make sense.</h2>
+        <p class="modal-intro">Create a demo profile to personalize your preview. Your details stay in this browser.</p>
+        <label for="full-name">Your name</label><input id="full-name" name="name" autocomplete="name" placeholder="Jordan Lee" required maxlength="60">
+        <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="254">
+        <div class="form-error" id="form-error" role="alert"></div>
+        <button class="button button-dark modal-submit" id="signup-submit" type="submit">Create your demo profile <span>→</span></button>
+        <p class="modal-disclaimer">Demo only. No real bank account is created. If Whop checkout is configured, continuing will take you to Whop to complete membership checkout.</p>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
